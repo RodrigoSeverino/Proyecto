@@ -37,7 +37,7 @@ if($_POST){
     <label for="email">E-mail</label>
     <input type="text" name="email"  placeholder="ingresa tu e-mail" required>
     <br>
-    <label for="edad">Edad</label>
+    <label for="edad">Fecha de Nacimiento</label>
     <input type="number" name="edad" placeholder="XX/XX/XXXX">
     <br>
   </div>

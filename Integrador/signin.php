@@ -1,6 +1,8 @@
 <?php
 if($_POST){
 //ACA LLEGAN LOS DATOS DEL FORMULARIO
+
+
 }
 
 
@@ -42,11 +44,11 @@ if($_POST){
     <br>
   </div>
     <div class="columna2">
-    <label for="localidad">Localidad</label>
-    <input type="text" name="localidad" placeholder="ingresa tu localidad" required>
+    <label for="contrasena">Contraseña</label>
+    <input type="password" name="contrasena" placeholder="ingresa su contraseña" required>
     <br>
-    <label for="provincia">provincia</label>
-    <input type="text" name="provincia" placeholder="ingresa tu provincia" required>
+    <label for="confirContr">Confirmar Contraseña</label>
+    <input type="text" name="confirContr" placeholder="ingresa tu contraseña" required>
     <br>
     <label for="pais">Pais</label>
     <input type="text" name="pais" placeholder="ingresa tu pais" required>

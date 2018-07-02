@@ -36,12 +36,11 @@ funcion validarInformacion($datos){
   if (strlen($datos['telefono']) == 0) {
     $errores['telefono'] = "No ingreso su telefono";
   }
-  /*
-  if(strlen($datos['password']) < 4){
-      $errores['password'] = "La contraseña es muy corta";
-  } else if ($datos['password'] != $datos['cpassword']){
-      $errores['password'] = "La contraseña no coincide";
-  }*/
+  if(strlen($datos['contrasena']) < 4){
+      $errores['contrasena'] = "La contraseña es muy corta";
+  } else if ($datos['contrasena'] != $datos['confirContr']){
+      $errores['contrasena'] = "La contraseña no coincide";
+  }
   return $errores;
 }
 
@@ -55,7 +54,7 @@ function crearUsuario($datos){
     "provincia" => $datos['provincia'],
     "localidad" => $datos['localidad'],
     "telefono" => $datos['telefono']
-    /*"password" => password_hash($datos["password"], PASSWORD_DEFAULT), */
+    "password" => password_hash($datos["contrasena"], PASSWORD_DEFAULT),
   ];
   return $usuario;
 }

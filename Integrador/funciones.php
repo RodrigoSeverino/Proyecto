@@ -27,12 +27,6 @@ funcion validarInformacion($datos){
   if (strlen($datos['pais']) == 0) {
     $errores['pais'] = "No ingreso su pais";
   }
-  if (strlen($datos['provincia']) == 0) {
-    $errores['provincia'] = "No ingreso su provincia";
-  }
-  if (strlen($datos['localidad']) == 0) {
-    $errores['localidad'] = "No ingreso su localidad";
-  }
   if (strlen($datos['telefono']) == 0) {
     $errores['telefono'] = "No ingreso su telefono";
   }
@@ -51,8 +45,6 @@ function crearUsuario($datos){
     "edad" => $datos['edad'],
     "email" => $datos['email'],
     "pais" => $datos['pais'],
-    "provincia" => $datos['provincia'],
-    "localidad" => $datos['localidad'],
     "telefono" => $datos['telefono']
     "password" => password_hash($datos["contrasena"], PASSWORD_DEFAULT),
   ];

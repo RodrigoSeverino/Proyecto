@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-funcion validarInformacion($datos){
+function validarInformacion($datos){
   foreach ($datos as $key => $value) {
     $datos[$key] = trim($value);
   }
@@ -36,8 +36,25 @@ funcion validarInformacion($datos){
       $errores['contrasena'] = "La contraseña no coincide";
   }
   return $errores;
-}
 
+
+}
+/*
+if ($_POST) {
+
+$query = $db->prepare("INSERT INTO movies (nombre, apellido, email, fecha_nacimiento,contraseña,pais,telefono) VALUES (:nombre, :apellido, :email, :fecha_nacimiento, :contraseña, :pais, :telefono)");
+
+$query->bindParam(':nombre', $_POST['nombre']);
+$query->bindParam(':apellido', $_POST['apellido']);
+$query->bindParam(':email', $_POST['email']);
+$query->bindParam(':fecha_nacimiento', $_POST['edad']);
+$query->bindParam(':fecha', $_POST['contrasena']);
+$query->bindParam(':pais', $_POST['pais']);
+$query->bindParam(':telefono', $_POST['telefono']);
+
+$query->execute();
+}
+*/
 function crearUsuario($datos){
   $usuario = [
     "nombre" => $datos['nombre'],
@@ -45,8 +62,8 @@ function crearUsuario($datos){
     "edad" => $datos['edad'],
     "email" => $datos['email'],
     "pais" => $datos['pais'],
-    "telefono" => $datos['telefono']
-    "password" => password_hash($datos["contrasena"], PASSWORD_DEFAULT),
+    "telefono" => $datos['telefono'],
+    "password" => password_hash($datos["contrasena"], PASSWORD_DEFAULT)
   ];
   return $usuario;
 }

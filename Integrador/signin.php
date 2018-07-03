@@ -1,12 +1,16 @@
 <?php
-if($_POST){
-//ACA LLEGAN LOS DATOS DEL FORMULARIO
+require_once 'funciones.php';
+require_once 'conexion.php';
+
+  //  if($_POST){
+      //  $errores = validarInformacion($_POST);
+    //    if(count($errores) == 0){
+        //        $usuario = crearUsuario($_POST);
+        //}
 
 
-}
+?>
 
-
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +44,7 @@ if($_POST){
     <input type="text" name="email"  placeholder="ingresa tu e-mail" required>
     <br>
     <label for="edad">Fecha de Nacimiento</label>
-    <input type="number" name="edad" placeholder="XX/XX/XXXX">
+    <input type="date" name="edad" placeholder="XX/XX/XXXX">
     <br>
   </div>
     <div class="columna2">

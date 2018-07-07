@@ -2,13 +2,17 @@
 require_once 'funciones.php';
 require_once 'conexion.php';
 
-  //  if($_POST){
-      //  $errores = validarInformacion($_POST);
-    //    if(count($errores) == 0){
-        //        $usuario = crearUsuario($_POST);
-        //}
-
-
+if($_POST){
+$errores = validarInformacion($_POST);
+if(count($errores) == 0){
+  crearUsuario($_POST);
+ header('Location:login.php');
+}else{
+  foreach ($errores as $error) {
+    echo $error . "<br>";
+  }
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,15 +34,15 @@ require_once 'conexion.php';
   <a href="signin.php">Sign In</a>
   </div>
 
-<!--contenido-->
+
 <main >
   <form action="" method="POST">
     <div class="columna1">
     <label for="nombre" class="nombre">Nombre</label>
-    <input type="text" id="nombre" placeholder="Ingresá tu nombre" required>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
     <br>
     <label for="apellido">Apellido</label>
-    <input type="text" id="apellido" placeholder="Ingresa tu apellido" required>
+    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido" required>
     <br>
     <label for="email">E-mail</label>
     <input type="text" name="email"  placeholder="ingresa tu e-mail" required>
@@ -52,13 +56,13 @@ require_once 'conexion.php';
     <input type="password" name="contrasena" placeholder="ingresa su contraseña" required>
     <br>
     <label for="confirContr">Confirmar Contraseña</label>
-    <input type="text" name="confirContr" placeholder="ingresa tu contraseña" required>
+    <input type="password" name="confirContr" placeholder="ingresa tu contraseña" required>
     <br>
-    <label for="pais">Pais</label>
+   <label for="pais">Pais</label>
     <input type="text" name="pais" placeholder="ingresa tu pais" required>
     <br>
     <label for="telefono/celular">telefono/Celular</label>
-    <input type="number" name="telefono/celular" placeholder="ingrese su numero" required>
+    <input type="number" name="telefono" placeholder="ingrese su numero" required>
     <br>
   </div>
   <div class="botonenviar">
@@ -70,7 +74,7 @@ require_once 'conexion.php';
   </form>
 </main>
 
- <!-- FOOTER -->
+
  <?php
    include_once('footer.php');
    ?>

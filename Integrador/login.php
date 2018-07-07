@@ -1,8 +1,13 @@
 <?php
-if($_POST){
-include_once('validar.php');
-}
 
+include_once('validar.php');
+include_once('funciones.php');
+
+/*  if ($_POST) {
+    // code...
+  }
+}
+*/
 
  ?>
 <!DOCTYPE html>

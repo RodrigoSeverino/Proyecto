@@ -1,5 +1,7 @@
 <?php
+require_once('conexion.php');
 session_start();
+
 
 function validarInformacion($datos){
   foreach ($datos as $key => $value) {
@@ -25,9 +27,9 @@ function validarInformacion($datos){
   if (strlen($datos['pais']) == 0) {
     $errores['pais'] = "No ingreso su pais";
   }
-  if (strlen($datos['telefono']) == 0) {
-    $errores['telefono'] = "No ingreso su telefono";
-  }
+  //if (strlen($datos['telefono']) == 0) {
+  //  $errores['telefono'] = "No ingreso su telefono";
+  //}
   if(strlen($datos['contrasena']) < 4){
       $errores['contrasena'] = "La contraseña es muy corta";
   } else if ($datos['contrasena'] != $datos['confirContr']){
@@ -39,17 +41,36 @@ function validarInformacion($datos){
 }
 
 function crearUsuario($datos){
-   $usuario = [
-     "nombre" => $datos['nombre'],
-     "apellido" => $datos['apellido'],
-     "edad" => $datos['edad'],
-     "email" => $datos['email'],
-     "pais" => $datos['pais'],
-     "telefono" => $datos['telefono'],
-     "password" => password_hash($datos["contrasena"], PASSWORD_DEFAULT)
-   ];
-   return $usuario;
- }
+  $dsn= "mysql:host=127.0.0.1;dbname=dbproyecto;port=3306";
+  $db_user ='root';
+  $db_pass ='';
+  $opt = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+
+  try {
+    $db = new PDO($dsn, $db_user, $db_pass, $opt);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  } catch (PDOException $Exception) {
+    echo $Exception->getMessage();
+  }
+
+
+  $stmt = $db->prepare("INSERT INTO usuarios (nombre, apellido, email, fecha_nacimiento, contrasena, pais) VALUES (:nombre, :apellido, :email, :fecha_nacimiento, :contrasena, :pais)");
+
+  $stmt->bindParam(':nombre', $datos['nombre']);
+  $stmt->bindParam(':apellido', $datos['apellido']);
+  $stmt->bindParam(':email', $datos['email']);
+  $stmt->bindParam(':fecha_nacimiento', $datos['edad']);
+  $stmt->bindParam(':contrasena', $datos['contrasena']);
+  $stmt->bindParam(':pais', $datos['pais']);
+
+
+  $stmt->execute();
+
+  //echo "Usuario Registrado";
+
+}
+
+
 function login($usuario){
   $_SESSION["email"]= $usuario['email'];
 

@@ -5,8 +5,8 @@ require_once 'conexion.php';
 if($_POST){
 $errores = validarInformacion($_POST);
 if(count($errores) == 0){
-  crearUsuario($_POST);
- header('Location:login.php');
+  return crearUsuario($_POST);
+
 }else{
   foreach ($errores as $error) {
     echo $error . "<br>";
@@ -60,9 +60,9 @@ if(count($errores) == 0){
     <br>
    <label for="pais">Pais</label>
     <input type="text" name="pais" placeholder="ingresa tu pais" required>
-    <br>
+    <!--<br>
     <label for="telefono/celular">telefono/Celular</label>
-    <input type="number" name="telefono" placeholder="ingrese su numero" required>
+    <input type="number" name="telefono" placeholder="ingrese su numero" required> -->
     <br>
   </div>
   <div class="botonenviar">

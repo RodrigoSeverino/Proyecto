@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Usuario{
 
@@ -6,7 +6,7 @@ class Usuario{
  protected $apellidoUsuario = [];
  private $contrasenaUsuario = [];
  protected $emailUsuario = [];
- 
+
 public function __construct(array $nombreUsuario,array $apellidoUsuario,array $contrasenaUsuario,array $emailUsuario){
 
  $this->nombreUsuario = $nombreUsuario;
@@ -40,14 +40,8 @@ public function __construct(array $nombreUsuario,array $apellidoUsuario,array $c
  	return $emailUsuario;
  }
 
- 
+
  }
- 
-
-
-
-
-
 
 
 

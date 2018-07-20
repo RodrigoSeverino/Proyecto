@@ -3,7 +3,7 @@
   margin: 0;
 }
 /*contiene el header y el contenido respectivo de la pagina*/
-.container {
+ .container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -19,7 +19,7 @@
    height: 300px;
 }
 /* barra de navegacion de la pagina */
-nav {
+ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -31,7 +31,7 @@ nav {
   background: black;
 }
 /* NAV */
-nav ul {
+  nav ul {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -63,7 +63,7 @@ nav img{
   border-radius: 25%;
 }
 
-.login{
+ .login{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -121,7 +121,7 @@ nav img{
   width: 50%;
   margin-left:50px;
 }
-div .botonenviar{
+ div .botonenviar{
   display: flex;
   flex-direction: row;
   justify-content: center; 
@@ -148,6 +148,7 @@ main form label{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 10px;
   
 }
 

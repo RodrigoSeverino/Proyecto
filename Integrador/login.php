@@ -3,11 +3,10 @@
 include_once('validar.php');
 include_once('funciones.php');
 
-/*  if ($_POST) {
-    // code...
-  }
-}
-*/
+// if ($_POST) {
+//   buscarPorMail($_POST['email']);
+// 
+// }
 
  ?>
 <!DOCTYPE html>

@@ -62,14 +62,28 @@ function crearUsuario($datos){
   $stmt->bindParam(':fecha_nacimiento', $datos['edad']);
   $stmt->bindParam(':contrasena', $datos['contrasena']);
   $stmt->bindParam(':pais', $datos['pais']);
-
-
   $stmt->execute();
-
-  //echo "Usuario Registrado";
 
 }
 
+// function buscarPorMail($email){
+//   $dsn= "mysql:host=127.0.0.1;dbname=dbproyecto;port=3306";
+//   $db_user ='root';
+//   $db_pass ='';
+//   $opt = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+//
+//   try {
+//     $db = new PDO($dsn, $db_user, $db_pass, $opt);
+//     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//   } catch (PDOException $Exception) {
+//     echo $Exception->getMessage();
+//   }
+//
+//   $stmt= $db->prepare("SELECT FROM usuarios WHERE email = $email ");
+//   $stmt->execute();
+//
+//   return $stmt;
+// }
 
 function login($usuario){
   $_SESSION["email"]= $usuario['email'];

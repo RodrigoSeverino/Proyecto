@@ -3,7 +3,7 @@
   margin: 0;
 }
 /*contiene el header y el contenido respectivo de la pagina*/
-.container {
+ .container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -17,7 +17,7 @@
  header {
 }
 /* barra de navegacion de la pagina */
-nav {
+  nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -28,8 +28,7 @@ nav {
   -moz-osx-font-smoothing: grayscale;
   background: black;
 }
-/* NAV */
-nav ul {
+  nav ul {
   display: flex;
   flex-direction: row;
   list-style: none;

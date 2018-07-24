@@ -40,7 +40,7 @@ function validarInformacion($datos){
 
 }
 
-function crearUsuario($datos){
+ function crearUsuario($datos){
   $dsn= "mysql:host=127.0.0.1;dbname=dbproyecto;port=3306";
   $db_user ='root';
   $db_pass ='';

@@ -34,7 +34,7 @@ public function traerProductosNombre(){
 }
 
 public function traerStock(){
-
+   
 }
 
 public function comprarse(){

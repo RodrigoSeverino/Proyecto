@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 
  class baseDeDatos{
@@ -19,8 +19,8 @@
    } catch (PDOException $Exception) {
     echo $Exception->getMessage();
    }
-    
-   
+
+
    }
 
 
@@ -31,9 +31,9 @@
   public function traerPorNombre{
 
   }
-  
+
   public function traerPorId{
-  	
+
   }
 
 

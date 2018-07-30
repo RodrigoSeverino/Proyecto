@@ -21,16 +21,29 @@ class Producto {
   }
 
 public function listarProductos(){
-
-}
+	$query = $db->query("SELECT * FROM products"); 
+     $results = $query->fetchAll(PDO::FETCH_ASSOC);
+      foreach ($results as $productos) {
+      	echo $productos['name','photo'] . "<br>"
+      }
+} 
 
 public function traerProductosId(){
-
+$query = $db->query("SELECT * FROM products"); 
+     $results = $query->fetchAll(PDO::FETCH_ASSOC);
+      foreach ($results as $id) {
+      	echo $id['id'];
+      }
 }
 
 
 public function traerProductosNombre(){
 
+ $query = $db->query("SELECT * FROM products"); 
+     $results = $query->fetchAll(PDO::FETCH_ASSOC);
+      foreach ($results as $nombre) {
+      	echo $nombre['name'];
+      }
 }
 
 public function traerStock(){

@@ -105,7 +105,7 @@ public function setFechaNacimiento($fechaNacimiento){
  }
 
 public function elegirMetodoPago(){
-
+  
 
 }
 

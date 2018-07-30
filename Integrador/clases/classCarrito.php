@@ -2,16 +2,16 @@
 
   class carrito{
 
-   public function reembolsar{
-
+   public function reembolsar(){
+     
    }
 
-   public function aggProducto{
-
+   public function aggProducto(){
+    
    }
 
     
-   public function eliminarProducto{
+   public function eliminarProducto(){
    	
    }
 

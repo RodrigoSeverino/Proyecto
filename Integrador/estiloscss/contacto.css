@@ -11,15 +11,13 @@
 	height: 100%;
   margin: 0 auto;
   justify-content: space-between;
-  background: red;
+
 
 }
-/*NO HAY NADA AHORA EN EL HEADER*/
- header {
-   width: 100%;
+ #logoserv{
    height: 300px;
-}
-/* barra de navegacion de la pagina */
+   width: 100%;
+ }
 nav {
   display: flex;
   flex-direction: row;
@@ -101,7 +99,7 @@ nav img{
 }
 
 main form{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   align-items: space-around;
@@ -114,26 +112,25 @@ main form{
 }
 .columna2{
   width: 40%;
-  margin-left:50px;
+  margin-left:100px;
 
 }
-main form button{
+
+div .botonenviar{
+  height: auto;
+  display: flex;
   width: 100px;
-  height: 40px;
-  text-align: center;
-  margin: 0 auto;
-  font-family: 'Questrial', sans-serif;
-  background: grey;
-  color: white;
-  line-height: 40px;
+  flex-direction: column;
   align-self: center;
 }
-.botonenviar{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
+button{
+  background-color: grey;
+  font-weight: bold;
+  height: 30px;
+  margin-bottom: 50px;
 }
+
 main form label{
   display: flex;
   flex-direction: row;

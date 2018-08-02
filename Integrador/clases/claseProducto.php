@@ -20,19 +20,19 @@ class Producto {
  $this->stockProducto= $stockProducto;
   }
 
-public function listarProductos(){
-	$query = $db->query("SELECT * FROM products"); 
-     $results = $query->fetchAll(PDO::FETCH_ASSOC);
-      foreach ($results as $productos) {
-      	echo $productos['name','photo'] . "<br>"
-      }
-} 
+//public function traerProductos(){
+	//$query = $db->query("SELECT * FROM products"); 
+    // $results = $query->fetchAll(PDO::FETCH_ASSOC);
+      //foreach ($results as $productos) {
+      	//echo $productos['nombreProducto','fotoProducto','idProducto','stockProducto','precioProducto'] . "<br>"
+     // }
+//} 
 
 public function traerProductosId(){
 $query = $db->query("SELECT * FROM products"); 
      $results = $query->fetchAll(PDO::FETCH_ASSOC);
       foreach ($results as $id) {
-      	echo $id['id'];
+      	echo $id['idProducto'];
       }
 }
 
@@ -42,11 +42,16 @@ public function traerProductosNombre(){
  $query = $db->query("SELECT * FROM products"); 
      $results = $query->fetchAll(PDO::FETCH_ASSOC);
       foreach ($results as $nombre) {
-      	echo $nombre['name'];
+      	echo $nombre['nombreProducto'];
       }
 }
 
 public function traerStock(){
+  $query = $db->query("SELECT * FROM products"); 
+     $results = $query->fetchAll(PDO::FETCH_ASSOC);
+      foreach ($results as $nombre) {
+        echo $nombre['stockProducto'];
+      }
    
 }
 

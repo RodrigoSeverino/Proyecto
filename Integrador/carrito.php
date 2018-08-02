@@ -1,4 +1,7 @@
-
+<?php 
+include_once('conexion.php');
+include_once('clases/claseProducto.php')
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +23,9 @@
 
 <!--contenido-->
 <main>
-
+ <?php 
+ //$productos = Producto::fetchAll();
+  ?>
 </main>
 
  <!-- FOOTER -->

@@ -78,34 +78,34 @@ public function setFechaNacimiento($fechaNacimiento){
  }
 
 
- public function crearUsuario($datos){
- $dsn= "mysql:host=127.0.0.1;dbname=dbproyecto;port=3306";
-  $db_user ='root';
-  $db_pass ='';
-  $opt = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
-
-  try {
-    $db = new PDO($dsn, $db_user, $db_pass, $opt);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  } catch (PDOException $Exception) {
-    echo $Exception->getMessage();
-  }
-
-
-  $stmt = $db->prepare("INSERT INTO usuarios (nombre, apellido, email, fecha_nacimiento, contrasena, pais) VALUES (:nombre, :apellido, :email, :fecha_nacimiento, :contrasena, :pais)");
-
-  $stmt->bindParam(':nombre', $datos['nombre']);
-  $stmt->bindParam(':apellido', $datos['apellido']);
-  $stmt->bindParam(':email', $datos['email']);
-  $stmt->bindParam(':fecha_nacimiento', $datos['edad']);
-  $stmt->bindParam(':contrasena', $datos['contrasena']);
-  $stmt->bindParam(':pais', $datos['pais']);
-  $stmt->execute();
-  
- }
+ // public function crearUsuario($datos){
+ // $dsn= "mysql:host=127.0.0.1;dbname=dbproyecto;port=3306";
+ //  $db_user ='root';
+ //  $db_pass ='';
+ //  $opt = [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+ //
+ //  try {
+ //    $db = new PDO($dsn, $db_user, $db_pass, $opt);
+ //    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+ //  } catch (PDOException $Exception) {
+ //    echo $Exception->getMessage();
+ //  }
+ //
+ //
+ //  $stmt = $db->prepare("INSERT INTO usuarios (nombre, apellido, email, fecha_nacimiento, contrasena, pais) VALUES (:nombre, :apellido, :email, :fecha_nacimiento, :contrasena, :pais)");
+ //
+ //  $stmt->bindParam(':nombre', $datos['nombre']);
+ //  $stmt->bindParam(':apellido', $datos['apellido']);
+ //  $stmt->bindParam(':email', $datos['email']);
+ //  $stmt->bindParam(':fecha_nacimiento', $datos['edad']);
+ //  $stmt->bindParam(':contrasena', $datos['contrasena']);
+ //  $stmt->bindParam(':pais', $datos['pais']);
+ //  $stmt->execute();
+ //
+ // }
 
 public function elegirMetodoPago(){
-  
+
 
 }
 

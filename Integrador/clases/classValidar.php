@@ -1,12 +1,12 @@
-<?php  
+<?php
 equire_once('conexion.php');
 session_start();
 
 class validator {
 
-   public function validarDatosUsuario($datos){ 
+   public function validarDatosUsuario($datos){
 
-      
+
   foreach ($datos as $key => $value) {
     $datos[$key] = trim($value);
   }
@@ -30,9 +30,6 @@ class validator {
   if (strlen($datos['pais']) == 0) {
     $errores['pais'] = "No ingreso su pais";
   }
-  //if (strlen($datos['telefono']) == 0) {
-  //  $errores['telefono'] = "No ingreso su telefono";
-  //}
   if(strlen($datos['contrasena']) < 4){
       $errores['contrasena'] = "La contraseña es muy corta";
   } else if ($datos['contrasena'] != $datos['confirContr']){
@@ -42,26 +39,9 @@ class validator {
 
    }
 
-  public function validarDatosProducto{
-
-  }
-
-
-
-  public function validarRegistro{
-
-  }
-
   public function validarContactanos{
 
   }
-
-
-  public function validarServicioTecnico{
-
-  }
-
-  
 
   }
 

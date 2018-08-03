@@ -1,10 +1,9 @@
 <?php
-equire_once('conexion.php');
-session_start();
+require_once('conexion.php');
 
 class validator {
 
-   public function vlaidarRegistro($datos){
+   public function validarRegistro($datos){
 
 
   foreach ($datos as $key => $value) {

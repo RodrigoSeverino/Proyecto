@@ -1,12 +1,8 @@
 <?php
 
 
-include_once('funciones.php');
+require_once('global.php');
 
-// if ($_POST) {
-//   buscarPorMail($_POST['email']);
-//
-// }
 
  ?>
 <!DOCTYPE html>

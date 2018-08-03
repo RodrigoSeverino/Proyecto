@@ -1,12 +1,13 @@
 <?php
-require_once 'funciones.php';
-require_once 'conexion.php';
+require_once 'global.php';
 
 if($_POST){
-$errores = validarInformacion($_POST);
+$errores = $validator->validarRegistro($_POST, $db);
 if(count($errores) == 0){
-  return crearUsuario($_POST);
-  //header('Location: login.php');
+  $usuario = new Usuario ($_POST["nombre"],$_POST["apellido"],$_POST['contrasena'], $_POST['email'],$_POST['pais'],$_POST['edad'],NULL);
+
+  $usuario = $db->guardarUsuario($usuario);
+  header('Location: login.php');
 } else
   {
     foreach ($errores as $error) {

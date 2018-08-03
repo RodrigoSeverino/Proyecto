@@ -9,12 +9,12 @@ require_once('classUsuario.php');
 
 
    public function __construct(){
-        $dsn= 'mysql:host=localhost;dbname=dbproyecto;port=3306';
+        $dsn= 'mysql:host=127.0.0.1;dbname=dbproyecto;port=3306';
         $username = "root";
         $password = "";
 
         try {
-          $this->conexion = new PDO($dns, $username, $password);
+          $this->conexion = new PDO($dsn, $username, $password);
         } catch (Exception $e) {
           echo "La conexion a la base de datos falló: " . $e->getMessage();
         }
@@ -62,7 +62,7 @@ require_once('classUsuario.php');
 
         $usuariosFormatoClase = [];
 
-        foreach ($usuariosFormatoArray as $usuario)
+        foreach ($usuariosFormatoArray as $usuario):
             $usuariosFormatoClase[]= new Usuario($usuario["nombre"],$usuario["apellido"],$usuario['contrasena'], $usuario['email'],$usuario['pais'],$usuario['fechaNacimiento'],$usuario['idUsuario']);
         endforeach;
 

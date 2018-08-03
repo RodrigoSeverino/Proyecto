@@ -21,6 +21,7 @@
   if (isset($_SESSION["email"])) {
     return isset($_SESSION["estoyLogueado"]);
 }
+}
 
   public function logout(){
    session_destroy();

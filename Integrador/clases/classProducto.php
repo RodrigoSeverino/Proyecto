@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 
 class Producto {
@@ -12,7 +12,7 @@ class Producto {
 
   public function __construct(array $nombreProducto,array $idProducto,array $precioProducto,array $fotoProducto,array $stockProducto){
 
-   
+
  $this->nombreProducto = $nombreProducto;
  $this->idProducto = $idProducto;
  $this->precioProducto = $precioProducto;
@@ -21,15 +21,15 @@ class Producto {
   }
 
 //public function traerProductos(){
-	//$query = $db->query("SELECT * FROM products"); 
+	//$query = $db->query("SELECT * FROM products");
     // $results = $query->fetchAll(PDO::FETCH_ASSOC);
       //foreach ($results as $productos) {
       	//echo $productos['nombreProducto','fotoProducto','idProducto','stockProducto','precioProducto'] . "<br>"
      // }
-//} 
+//}
 
 public function traerProductosId(){
-$query = $db->query("SELECT * FROM products"); 
+$query = $db->query("SELECT * FROM products");
      $results = $query->fetchAll(PDO::FETCH_ASSOC);
       foreach ($results as $id) {
       	echo $id['idProducto'];
@@ -39,7 +39,7 @@ $query = $db->query("SELECT * FROM products");
 
 public function traerProductosNombre(){
 
- $query = $db->query("SELECT * FROM products"); 
+ $query = $db->query("SELECT * FROM products");
      $results = $query->fetchAll(PDO::FETCH_ASSOC);
       foreach ($results as $nombre) {
       	echo $nombre['nombreProducto'];
@@ -47,12 +47,12 @@ public function traerProductosNombre(){
 }
 
 public function traerStock(){
-  $query = $db->query("SELECT * FROM products"); 
+  $query = $db->query("SELECT * FROM products");
      $results = $query->fetchAll(PDO::FETCH_ASSOC);
       foreach ($results as $nombre) {
         echo $nombre['stockProducto'];
       }
-   
+
 }
 
 public function comprarse(){
@@ -86,12 +86,3 @@ public function promociones(){
 
 
 ?>
-
-
-
-
-
-
-
-
-

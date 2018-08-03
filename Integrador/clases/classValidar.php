@@ -4,7 +4,7 @@ session_start();
 
 class validator {
 
-   public function validarDatosUsuario($datos){
+   public function vlaidarRegistro($datos){
 
 
   foreach ($datos as $key => $value) {
@@ -39,8 +39,32 @@ class validator {
 
    }
 
-  public function validarContactanos{
+  public function validarLogin($datos, DB $db){
 
+    $errores = [];
+
+    foreach ($datos as $key => $value) {
+      $datos[$key] = trim($valor);
+    }
+
+    if ($datos['emailLogin'] == "") {
+      $errores['emailLogin'] = "Debes ingresar un email";
+    } elseif (filter_var($datos['emailLogin'], FILTER_VALIDATE_EMAIL) == false) {
+      $errores['emailLogin'] = "El email no es valido";
+    } elseif ($db->buscamePorEmail($datos['emailLogin']) == null) {
+      $errores['emailLogin']= "No estas registrado en nuestra pagina";
+    }
+
+    $usuario = $db->buscamePorEmail($datos['emailLogin']);
+
+    if ($datos['contrasenaLogin'] == "") {
+      $errores['contrasenaLogin'] = "No llenaste la contraseña";
+    } elseif ($usuario != null) {
+      if (password_verify($datos['contrasenaLogin'], $usuario->getContrasenaUsuario()) == false) {
+        $errores['contrasenaLogin'] = "La contraseña no es valida";
+      }
+    }
+    return $errores;
   }
 
   }

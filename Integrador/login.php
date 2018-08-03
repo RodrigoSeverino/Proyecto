@@ -31,17 +31,17 @@ include_once('funciones.php');
 <!--contenido-->
 <main>
   <form action="" method="POST">
-    <label for="nombre" class="nombre">Usuario</label><br>
-    <input type="text" id="nombre" name="usuario" placeholder="Ingresá tu nombre">
+    <label for="nombre" class="nombre">Email</label><br>
+    <input type="text" id="nombre" name="emailLogin" placeholder="Ingresá tu Email">
     <br>
     <div><?php
-    if(isset($errores['usuario'])){
-    echo($errores['usuario']);
+    if(isset($errores['emailLogin'])){
+    echo($errores['emailLogin']);
     }
     ?></div>
     <label for="contrasena">Contraseña</label>
     <br>
-    <input type="password" id="contrasena" name="contrasena"placeholder="Ingresa la contraseña">
+    <input type="password" id="contrasena" name="contrasenaLogin"placeholder="Ingresa la contraseña">
     <br>
     <div><?php
     if(isset($errores['contrasena'])){

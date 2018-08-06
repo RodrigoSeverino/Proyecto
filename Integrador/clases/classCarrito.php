@@ -1,6 +1,10 @@
 <?php
 
-  class carrito{
+ abstract class carrito{
+
+  public function __construct(){
+    
+  }
 
    public function reembolsar(){
      

@@ -1,6 +1,6 @@
 <?php 
-include_once('conexion.php');
-include_once('clases/claseProducto.php')
+include('conexion.php');
+include('clases/classProducto.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,7 +8,7 @@ include_once('clases/claseProducto.php')
   <title>Carrito</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=devise-width, initial-scale=1">
-  <link rel="stylesheet"  href="estiloscss/contacto.css">
+  <link rel="stylesheet"  href="estiloscss/carrito.css">
   <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
 </head>
 <body>
@@ -24,7 +24,13 @@ include_once('clases/claseProducto.php')
 <!--contenido-->
 <main>
  <?php 
- //$productos = Producto::fetchAll();
+   $db = new PDO('mysql:host=127.0.0.1;dbname=dbproyecto;port=3306','root','');
+   $query = $db->query('SELECT * FROM productos');
+   $productos = $query->fetchAll(PDO::FETCH_ASSOC);
+
+   foreach ($productos as $producto) {
+     echo  $producto['nombreProducto']. '<br>' .$producto['precioProducto']. '<br>' . $producto['idProducto'];
+   }
   ?>
 </main>
 

@@ -10,8 +10,9 @@ class Usuario{
  private $fechaNacimiento;
  private $idUsuario;
 
-public function __construct( $nombreUsuario, $apellidoUsuario, $contrasenaUsuario, $emailUsuario, $pais, $fechaNacimiento, $idUsuario) {
+public function __construct($nombreUsuario, $apellidoUsuario, $contrasenaUsuario, $emailUsuario, $pais, $fechaNacimiento, $idUsuario) {
 
+ $this->idUsuario = $idUsuario;
  $this->nombreUsuario = $nombreUsuario;
  $this->apellidoUsuario = $apellidoUsuario;
  if ($idUsuario == null) {
@@ -22,24 +23,23 @@ public function __construct( $nombreUsuario, $apellidoUsuario, $contrasenaUsuari
  $this->emailUsuario = $emailUsuario;
  $this->pais = $pais;
  $this->fechaNacimiento = $fechaNacimiento;
- $this->idUsuario = $idUsuario;
-}
+ }
 
 
- public function setNombreUsuario($nombre){
- 	$this->nombreUsuario = $nombre;
+ public function setNombreUsuario($nombreUsuario){
+ 	$this->nombreUsuario = $nombreUsuario;
  }
 
  public function getNombreUsuario(){
- 	return $nombreUsuario;
+ 	return $this->nombreUsuario;
  }
 
- public function setApellidoUsuario($apellido){
- 	$this->nombreUsuario = $apellido;
+ public function setApellidoUsuario($apellidoUsuario){
+ 	$this->apellidoUsuario = $apellidoUsuario;
  }
 
  public function getApellidoUsuario(){
- 	return $apellidoUsuario;
+ 	return $this->apellidoUsuario;
  }
 
   public function setEmail($emailUsuario){
@@ -47,21 +47,21 @@ public function __construct( $nombreUsuario, $apellidoUsuario, $contrasenaUsuari
  }
 
  public function getEmail(){
- 	return $emailUsuario;
+ 	return $this->emailUsuario;
  }
-public function setPais($pais){
+ public function setPais($pais){
  	$this->pais = $pais;
  }
 
  public function getPais(){
- 	return $pais;
+ 	return $this->pais;
  }
-public function setFechaNacimiento($fechaNacimiento){
+ public function setFechaNacimiento(){
  	$this->fechaNacimiento = $fechaNacimiento;
  }
 
- public function getFechaNacimiento(){
- 	return $fechaNacimiento;
+public function getFechaNacimiento(){
+ 	return $this->fechaNacimiento;
  }
 
 
@@ -71,11 +71,11 @@ public function setFechaNacimiento($fechaNacimiento){
 
 
  public function getIdUsuario(){
- 	return $idUsuario;
+ 	return $this->idUsuario;
  }
 
  public function getContrasenaUsuario(){
-   return $contrasenaUsuario;
+   return $this->contrasenaUsuario;
  }
 
  public function setContrasenaUsuario(){

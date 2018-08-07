@@ -3,14 +3,14 @@
 
 class Producto {
 
-   protected $nombreProducto = [];
-   protected $idProducto = [];
-   protected $precioProducto = [];
-   protected $fotoProducto = [];
-   protected $stockProducto = [];
+   private $nombreProducto;
+   private $idProducto;
+   private $precioProducto;
+   private $fotoProducto;
+   private $stockProducto;
 
 
-  public function __construct(array $nombreProducto,array $idProducto,array $precioProducto,array $fotoProducto,array $stockProducto){
+  public function __construct($nombreProducto,$idProducto,$precioProducto,$fotoProducto,$stockProducto){
 
 
  $this->nombreProducto = $nombreProducto;
@@ -20,13 +20,50 @@ class Producto {
  $this->stockProducto= $stockProducto;
   }
 
-//public function traerProductos(){
-	//$query = $db->query("SELECT * FROM products");
-    // $results = $query->fetchAll(PDO::FETCH_ASSOC);
-      //foreach ($results as $productos) {
-      	//echo $productos['nombreProducto','fotoProducto','idProducto','stockProducto','precioProducto'] . "<br>"
-     // }
-//}
+   public function getnombreProducto(){
+  return $this->nombreProducto;
+ }
+ public function setnombreProducto($nombreProducto){
+  $this->nombreProducto = $nombreProducto;
+ }
+
+public function getidProducto(){
+  return $this->idProducto;
+ }
+
+
+ public function setidProducto($idProducto){
+  $this->idProducto= $idProducto;
+ }
+
+
+ public function getprecioProducto(){
+  return $this->precioProducto;
+ }
+
+
+ public function setprecioProducto($precioProducto){
+    $this->precioProducto = $precioProducto;
+ }
+
+ public function getfotoProducto(){
+  return $this->fotoProducto;
+ }
+
+
+ public function setfotoProducto($fotoProducto){
+    $this->fotoProducto = $fotoProducto;
+ }
+
+ public function getstockProducto(){
+  return $this->fotoProducto;
+ }
+
+
+ public function setstockProducto($stockProducto){
+    $this->stockProducto = $stockProducto;
+ }
+
 
 public function traerProductosId(){
 $query = $db->query("SELECT * FROM products");

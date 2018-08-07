@@ -29,8 +29,11 @@ include('clases/classProducto.php');
    $productos = $query->fetchAll(PDO::FETCH_ASSOC);
 
    foreach ($productos as $producto) {
-     echo  $producto['nombreProducto']. '<br>' .$producto['precioProducto']. '<br>' . $producto['idProducto'];
-   }
+          $productoObj= new Producto($producto['nombreProducto'],$producto['idProducto'],$producto['precioProducto'],$producto['fotoProducto'],$producto['stockProducto']); 
+          echo "<h1>". $productoObj->getnombreProducto(). "</h1>"."</br>";
+          echo "<div class= >" . $productoObj->getprecioProducto()."</br>";
+     //var_dump($producto);
+   }  
   ?>
 </main>
 

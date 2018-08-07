@@ -46,7 +46,7 @@ require_once('classUsuario.php');
         $usuarioFormatoArray = $query->fetch(PDO::FETCH_ASSOC);
 
         if ($usuarioFormatoArray) {
-          $usuario = new Usuario($usuarioFormatoArray["nombre"],$usuarioFormatoArray["apellido"],$usuarioFormatoArray['contrasena'], $usuarioFormatoArray['email'],$usuarioFormatoArray['pais'],$usuarioFormatoArray['fechaNacimiento'],$usuarioFormatoArray['idUsuario']);
+          $usuario = new Usuario($usuarioFormatoArray["nombreUsuario"],$usuarioFormatoArray["apellidoUsuario"],$usuarioFormatoArray['contrasenaUsuario'], $usuarioFormatoArray['emailUsuario'],$usuarioFormatoArray['pais'],$usuarioFormatoArray['fechaNacimiento'],$usuarioFormatoArray['idUsuario']);
 
           return $usuario;
         }else{

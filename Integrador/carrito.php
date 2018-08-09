@@ -26,15 +26,18 @@ include('clases/classProducto.php');
  <?php 
    $db = new PDO('mysql:host=127.0.0.1;dbname=dbproyecto;port=3306','root','');
    $query = $db->query('SELECT * FROM productos');
-   $productos = $query->fetchAll(PDO::FETCH_ASSOC);
+   $productos = $query->fetchAll(PDO::FETCH_ASSOC);?>
 
-   foreach ($productos as $producto) {
-          $productoObj= new Producto($producto['nombreProducto'],$producto['idProducto'],$producto['precioProducto'],$producto['fotoProducto'],$producto['stockProducto']); 
-          echo "<h1>". $productoObj->getnombreProducto(). "</h1>"."</br>";
-          echo "<div class= >" . $productoObj->getprecioProducto()."</br>";
-     //var_dump($producto);
-   }  
+  <?php foreach ($productos as $producto) { 
+      $productoObj= new Producto($producto['nombreProducto'],$producto['idProducto'],$producto['precioProducto'],$producto['fotoProducto'],$producto['stockProducto']);
   ?>
+         <article class="cocinas">    
+           <a href="cocinas.php"> <?php echo  $productoObj->getnombreProducto(); ?> </a>
+        </article>
+
+       <?php   } ?>
+     <!--  echo "<h1>". $productoObj->getnombreProducto(). "</h1>"."</br>";
+       echo "<div class= >" . $productoObj->getprecioProducto()."</br>"; --> 
 </main>
 
  <!-- FOOTER -->

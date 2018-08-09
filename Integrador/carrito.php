@@ -23,20 +23,20 @@ include('clases/classProducto.php');
 
 <!--contenido-->
 <main>
- <?php
-   $db = new PDO('mysql:host=127.0.0.1;dbname=dbproyecto;port=3306','root','');
-   $query = $db->query('SELECT * FROM productos');
-   $productos = $query->fetchAll(PDO::FETCH_ASSOC);?>
+ <!-- <?php
+  // $db = new PDO('mysql:host=127.0.0.1;dbname=dbproyecto;port=3306','root','');
+  // $query = $db->query('SELECT * FROM productos');
+  // $productos = $query->fetchAll(PDO::FETCH_ASSOC);?>
 
-  <?php foreach ($productos as $producto) {
-      $productoObj= new Producto($producto['nombreProducto'],$producto['idProducto'],$producto['precioProducto'],$producto['fotoProducto'],$producto['stockProducto']);
+ <?php //foreach ($productos as $producto) {
+      //$productoObj= new Producto($producto['nombreProducto'],$producto['idProducto'],$producto['precioProducto'],$producto['fotoProducto'],$producto['stockProducto']);
   ?>
          <article class="cocinas">
           <img src="imagenes/cocinas.jpg" alt="cocinas">
-          <a href="cocinas.php"> <?php echo  $productoObj->getnombreProducto(); ?> </a>
+          <a href="cocinas.php"> <?php //echo  $productoObj->getnombreProducto(); ?> </a>
         </article>
 
-       <?php   } ?>
+       <?php  // } ?> -->
      <!--  echo "<h1>". $productoObj->getnombreProducto(). "</h1>"."</br>";
        echo "<div class= >" . $productoObj->getprecioProducto()."</br>"; -->
 </main>

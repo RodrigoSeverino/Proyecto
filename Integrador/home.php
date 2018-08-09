@@ -33,27 +33,12 @@
     <img src="imagenes/anafes.jpg" alt="anafes">
     <a href="anafes.php">ANAFES</a>
   </article>
-  <article class="cocinas">
-    <img src="imagenes/cocinas.jpg" alt="cocinas">
-    <a href="cocinas.php">COCINAS</a>
-  </article>
-  <article class="hornos">
-    <img src="imagenes/hornos.jpg" alt="hornos">
-    <a href="hornos.php">HORNOS</a>
-  </article>
   <article class="campanas">
 
     <img src="imagenes/campanas.jpg" alt="campanas">
     <a href="campanas.php">CAMPANAS</a>
   </article>
-  <article class="anafes">
-    <img src="imagenes/anafes.jpg" alt="anafes">
-    <a href="anafes.php">ANAFES</a>
-  </article>
-  <article class="cocinas">
-    <img src="imagenes/cocinas.jpg" alt="cocinas">
-    <a href="cocinas.php">COCINAS</a>
-  </article>
+
 </main>
 
  <!-- FOOTER -->

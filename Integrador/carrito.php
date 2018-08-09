@@ -31,8 +31,9 @@ include('clases/classProducto.php');
   <?php foreach ($productos as $producto) { 
       $productoObj= new Producto($producto['nombreProducto'],$producto['idProducto'],$producto['precioProducto'],$producto['fotoProducto'],$producto['stockProducto']);
   ?>
-         <article class="cocinas">    
-           <a href="cocinas.php"> <?php echo  $productoObj->getnombreProducto(); ?> </a>
+         <article class="cocinas">  
+          <img src="imagenes/cocinas.jpg" alt="cocinas">  
+          <a href="cocinas.php"> <?php echo  $productoObj->getnombreProducto(); ?> </a>
         </article>
 
        <?php   } ?>

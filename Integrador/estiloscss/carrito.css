@@ -91,9 +91,41 @@ nav img{
 }
 
 /*EMPIEZA EL MAIN*/    
+main {
+  display: flex;
+  flex-direction: row;
+ justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+main article{
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
 
+main article a{
+  background: black;
+  color: white;
+  border-style: outset;
+  font-family: 'Questrial', sans-serif;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  border-radius: 50px;
+  height: 50px;
+}
 
-
+main article a:hover {
+  background: tomato;
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-decoration: none;
+   font-family: 'Questrial', sans-serif;
+}
 
 /*aca arrancan los estilos del footer*/
 footer img {

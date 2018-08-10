@@ -23,6 +23,7 @@ include('clases/classProducto.php');
 
 <!--contenido-->
 <main>
+  <img src="imagenes/carritoespacio.png" alt="espacio">
  <!-- <?php
   // $db = new PDO('mysql:host=127.0.0.1;dbname=dbproyecto;port=3306','root','');
   // $query = $db->query('SELECT * FROM productos');

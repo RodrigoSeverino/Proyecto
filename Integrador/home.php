@@ -23,20 +23,20 @@
 <main>
   <article class="cocinas">
     <img src="imagenes/cocinas.jpg" alt="cocinas">
-    <a href="cocinas.php">COCINAS</a>
+    <a href="home.php">COCINAS</a>
   </article>
   <article class="hornos">
     <img src="imagenes/hornos.jpg" alt="hornos">
-    <a href="hornos.php">HORNOS</a>
+    <a href="home.php">HORNOS</a>
   </article>
   <article class="anafes">
     <img src="imagenes/anafes.jpg" alt="anafes">
-    <a href="anafes.php">ANAFES</a>
+    <a href="home.php">ANAFES</a>
   </article>
   <article class="campanas">
 
     <img src="imagenes/campanas.jpg" alt="campanas">
-    <a href="campanas.php">CAMPANAS</a>
+    <a href="home.php">CAMPANAS</a>
   </article>
 
 </main>

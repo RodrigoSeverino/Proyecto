@@ -23,25 +23,22 @@
   <h1>Preguntas Frecuentes:</h1>
   <details>
     <summary>¿Hace cuanto están en el mercado?</summary>
-    <p>///RESPUESTA CORRESPONDIENTE///</p>
+    <p>Llevamos más de 5 años.</p>
   </details><details>
-    <summary>¿Hace cuanto están en el mercado?</summary>
-    <p>///RESPUESTA CORRESPONDIENTE///</p>
+    <summary>¿Hay repuestos en el país?</summary>
+    <p>Somos fabricantes, por lo que los repuestos son de facil acceso.</p>
   </details><details>
-    <summary>¿Hace cuanto están en el mercado?</summary>
-    <p>///RESPUESTA CORRESPONDIENTE///</p>
+    <summary>¿Los artefactos cuentan con habilitación para uso domestico?</summary>
+    <p>Si, todos nuestros productos están habilitados.</p>
   </details><details>
-    <summary>¿Hace cuanto están en el mercado?</summary>
-    <p>///RESPUESTA CORRESPONDIENTE///</p>
+    <summary>¿Los artefactos cuentan con garantía?</summary>
+    <p>Nuestros artefactos cuentan con garantía de 1 año desde la instalación</p>
   </details><details>
-    <summary>¿Hace cuanto están en el mercado?</summary>
-    <p>///RESPUESTA CORRESPONDIENTE///</p>
+    <summary>¿Hacen envios?</summary>
+    <p>Hacemos envios a todo el pais con un costo adicional dependiendo la zona</p>
   </details><details>
-    <summary>¿Hace cuanto están en el mercado?</summary>
-    <p>///RESPUESTA CORRESPONDIENTE///</p>
-  </details><details>
-    <summary>¿Hace cuanto están en el mercado?</summary>
-    <p>///RESPUESTA CORRESPONDIENTE///</p>
+    <summary>¿Cuentan con servicio tecnico?</summary>
+    <p>Si, tenemos servicio tecnico y equipo de reparación gratuito.</p>
   </details>
 
 </main>

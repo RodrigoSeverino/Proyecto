@@ -2,6 +2,7 @@
 
 
 require_once('global.php');
+require_once('clases/classUsuario.php');
 
 
  ?>

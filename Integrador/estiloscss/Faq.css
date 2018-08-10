@@ -161,8 +161,23 @@ footer{
       flex-direction: row;
       justify-content: space-around;
     }
+
     footer img{
       width: 30px;
+    }
 
+    details summary{
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: 10px;
+    }
+    
+    details p{
+      font-family: 'Questrial' , sans-serif;
+      display: flex;
+      justify-content: center;
+      font-size: 10px;
+      color: red;
+      background: black;
     }
 }

@@ -185,6 +185,39 @@ footer{
     }
     footer img{
       width: 30px;
+    }
+
+    main form label{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 15px;
+      font-size: 15px;
+    }
+
+    main form input{
+      flex-direction: column;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      margin: 10px;
+    }
+
+    form div .columna1{
+      flex-direction: column;
+      width: 100%;
+    }
+    form div .columna2{
+      flex-direction: column;
+      width: 100%;
+      margin-left: 0%;
 
     }
+      main form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    }
+
 }

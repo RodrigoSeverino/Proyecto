@@ -173,4 +173,11 @@ footer{
       width: 30px;
 
     }
+    main form input{
+      width: 150px;
+      height: 30px;
+      margin-bottom: 20px;
+      font-size: 20px;
+
+    }
 }
